@@ -107,10 +107,13 @@ while not win and num_of_times_played < 9:
 
   win = player_turn(circle, 1, box)
   num_of_times_played += 1
-  if win or num_of_times_played == 9:
+  if win:
     clear_screen()
     print_box(box)
     print(win[1])
+    break
+
+  elif num_of_times_played == 9:
     break
   
 
@@ -120,7 +123,7 @@ while not win and num_of_times_played < 9:
   #player 2 turn
   win = player_turn(cross, 2, box)
   num_of_times_played += 1
-  if win or num_of_times_played == 9:
+  if win:
     clear_screen()
     print_box(box)
     print(win[1])
@@ -131,6 +134,7 @@ while not win and num_of_times_played < 9:
 
 
 if not win:
+  clear_screen()
   print_box(box)
   print("Game is drawn.")
 
