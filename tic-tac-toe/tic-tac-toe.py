@@ -16,7 +16,7 @@ def print_box(list):
     print("\n")
 
 def clear_screen():      #clears the screen for each new move
-  if os.name == "nt":
+  if os.name == "posix":
     os.system("cls")
   else:
     os.system("clear")
@@ -61,8 +61,6 @@ def check_diagonally_right(symbol, list):
     j -= 1
   
   return True if count_diagonally_right == 3 else False
-``
-
 
 #asks player for the location and calls insert, print_box, and check functions
 #returns True if the player has won
