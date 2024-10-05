@@ -17,9 +17,9 @@ def print_box(list):
 
 def clear_screen():      #clears the screen for each new move
   if os.name == "posix":
-    os.system("cls")
-  else:
     os.system("clear")
+  else:
+    os.system("cls")
 
 def check_rows(symbol, list):
   for rows in list:
