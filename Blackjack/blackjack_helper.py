@@ -96,7 +96,7 @@ def print_end_turn_status(hand_value):
 #
 # Return:
 #   W (wins), L (loses), P (pushes) 
-def print_end_game_status(name, user_hand, dealer_hand):
+def print_end_game_status(user_hand, dealer_hand):
   if user_hand <= 21 and (user_hand > dealer_hand or dealer_hand > 21):
     return "W"
   elif user_hand > 21 or (dealer_hand <= 21 and dealer_hand > user_hand):
